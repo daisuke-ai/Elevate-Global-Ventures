@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 text-white px-6 py-3 rounded-lg font-medium 
+           transition-all duration-300 ease-in-out
+           hover:bg-blue-700 hover:shadow-lg
+           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-blue-600 px-6 py-3 rounded-lg font-medium 
+           border border-blue-200
+           transition-all duration-300 ease-in-out
+           hover:bg-blue-50 hover:border-blue-300
+           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg bg-white border border-gray-200
+           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
+           transition-all duration-300 ease-in-out;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-100
+           transition-all duration-300 ease-in-out
+           hover:shadow-md;
+  }
+}
+
+.testimonial-slide-enter {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.testimonial-slide-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 500ms ease-in-out;
+}
+
+.testimonial-slide-exit {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.testimonial-slide-exit-active {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 500ms ease-in-out;
+}
