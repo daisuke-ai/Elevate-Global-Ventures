@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowRight, Clock, DollarSign, Shield } from 'lucide-react';
+import { PropertyForm } from './PropertyForm';
 
 export const Hero = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
   return (
     <div className="relative min-h-screen">
       {/* Background Image with Overlay */}
@@ -25,7 +28,10 @@ export const Hero = () => {
             and close on your timeline. No repairs needed, no realtor fees, no hassle.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <button className="btn-primary text-lg group">
+            <button 
+              className="btn-primary text-lg group"
+              onClick={() => setIsFormOpen(true)}
+            >
               Get Your Cash Offer Now
               <ArrowRight className="inline-block ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </button>
@@ -54,6 +60,8 @@ export const Hero = () => {
           </div>
         </div>
       </div>
+
+      <PropertyForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
     </div>
   );
 };

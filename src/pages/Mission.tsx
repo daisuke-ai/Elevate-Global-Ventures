@@ -27,9 +27,9 @@ const Mission = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <div className="relative min-h-screen bg-gradient-to-br from-darkblue-800 via-darkblue-700 to-darkblue-900 text-white">
+      <div className="relative min-h-[calc(100vh-5rem)] lg:min-h-screen bg-gradient-to-br from-darkblue-800 via-darkblue-700 to-darkblue-900 text-white">
         <div className="absolute inset-0">
-          <div className="grid grid-cols-3 h-full opacity-20">
+          <div className="hidden lg:grid grid-cols-3 h-full opacity-20">
             <div className="bg-cover" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80")' }}></div>
             <div className="bg-cover" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80")' }}></div>
             <div className="bg-cover" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1509099836639-18ba1795216d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80")' }}></div>
@@ -37,45 +37,45 @@ const Mission = () => {
           <div className="absolute inset-0 bg-darkblue-900/80"></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 lg:pt-32 pb-20">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight">
-              Empowering Communities,<br />Preserving Heritage
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 sm:mb-8 leading-tight">
+              Empowering Communities,<br className="hidden sm:block" />Preserving Heritage
             </h1>
-            <p className="text-xl text-blue-100 mb-12 leading-relaxed">
+            <p className="text-lg sm:text-xl text-blue-100 mb-8 sm:mb-12 leading-relaxed px-4 sm:px-0">
               At Elevate Global Ventures, we're dedicated to empowering underserved families and Haitian migrants, 
               offering support that fosters resilience, connection, and opportunity. We believe that every individual, 
               regardless of background, should have the resources to thrive and contribute to a vibrant, inclusive future.
             </p>
-            <button className="btn-primary text-lg group">
-              Join Our Mission
-              <ArrowRight className="inline-block ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            <button className="inline-flex items-center justify-center px-6 py-3 text-base sm:text-lg font-medium rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 group">
+              <span>Join Our Mission</span>
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
           </div>
         </div>
 
         {/* Hero Bottom Cards */}
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-darkblue-900 to-transparent py-12">
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-darkblue-900 to-transparent py-8 sm:py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white/10 backdrop-blur-lg p-6 rounded-xl">
-                <Globe2 className="h-12 w-12 text-blue-400 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-center">Cultural Preservation</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+              <div className="bg-white/10 backdrop-blur-lg p-4 sm:p-6 rounded-xl">
+                <Globe2 className="h-8 sm:h-12 w-8 sm:w-12 text-blue-400 mx-auto mb-3 sm:mb-4" />
+                <h3 className="text-base sm:text-lg font-semibold text-center">Cultural Preservation</h3>
               </div>
-              <div className="bg-white/10 backdrop-blur-lg p-6 rounded-xl">
-                <Users className="h-12 w-12 text-blue-400 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-center">Community Building</h3>
+              <div className="bg-white/10 backdrop-blur-lg p-4 sm:p-6 rounded-xl">
+                <Users className="h-8 sm:h-12 w-8 sm:w-12 text-blue-400 mx-auto mb-3 sm:mb-4" />
+                <h3 className="text-base sm:text-lg font-semibold text-center">Community Building</h3>
               </div>
-              <div className="bg-white/10 backdrop-blur-lg p-6 rounded-xl">
-                <Wallet className="h-12 w-12 text-blue-400 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-center">Economic Empowerment</h3>
+              <div className="bg-white/10 backdrop-blur-lg p-4 sm:p-6 rounded-xl">
+                <Wallet className="h-8 sm:h-12 w-8 sm:w-12 text-blue-400 mx-auto mb-3 sm:mb-4" />
+                <h3 className="text-base sm:text-lg font-semibold text-center">Economic Empowerment</h3>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Rest of the content remains the same */}
+      {/* Rest of the content remains unchanged */}
       <div className="py-20 -mt-16 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
