@@ -4,26 +4,33 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Global Ventures Capital</title>
+    <title>Vite + React + TS</title>
   </head>
   <body>
-    <div id="root">
-      <form name="property-inquiry" netlify netlify-honeypot="bot-field" hidden>
-        <input type="text" name="address" />
-        <input type="text" name="city" />
-        <input type="text" name="state" />
-        <input type="text" name="zipCode" />
-        <input type="number" name="yearBuilt" />
-        <input type="number" name="squareFootage" />
-        <select name="bedrooms" />
-        <select name="bathrooms" />
-        <select name="condition" />
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <input type="tel" name="phone" />
-        <textarea name="notes" />
-      </form>
-    </div>
+    <!-- Hidden form for Netlify -->
+    <form name="property-inquiry" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="address" />
+      <input type="text" name="city" />
+      <input type="text" name="state" />
+      <input type="text" name="zipCode" />
+      <input type="number" name="yearBuilt" />
+      <input type="number" name="squareFootage" />
+      <select name="bedrooms">
+        <option></option>
+      </select>
+      <select name="bathrooms">
+        <option></option>
+      </select>
+      <select name="condition">
+        <option></option>
+      </select>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <textarea name="notes"></textarea>
+    </form>
+
+    <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
