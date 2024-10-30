@@ -88,8 +88,15 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ isOpen, onClose }) =
         <div className="p-6">
           {renderProgressBar()}
           
-          <form name="property-inquiry" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+          <form
+            name="property-inquiry"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
+          >
             <input type="hidden" name="form-name" value="property-inquiry" />
+            <input type="hidden" name="bot-field" />
             
             {step === 1 && (
               <div className="space-y-6">
