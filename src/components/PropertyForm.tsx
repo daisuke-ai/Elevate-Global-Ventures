@@ -8,10 +8,57 @@ interface PropertyFormProps {
 
 export const PropertyForm: React.FC<PropertyFormProps> = ({ isOpen, onClose }) => {
   const [step, setStep] = useState(1);
+  const [formData, setFormData] = useState({
+    address: '',
+    city: '',
+    state: '',
+    zipCode: '',
+    yearBuilt: '',
+    squareFootage: '',
+    bedrooms: '3',
+    bathrooms: '2',
+    condition: 'good',
+    name: '',
+    email: '',
+    phone: '',
+    notes: ''
+  });
   
   if (!isOpen) return null;
 
   const totalSteps = 3;
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          'form-name': 'property-inquiry',
+          ...formData
+        }).toString()
+      });
+      
+      if (response.ok) {
+        alert('Thank you for your submission! We will contact you soon.');
+        onClose();
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      alert('Sorry, there was an error submitting your form. Please try again.');
+    }
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
   const renderProgressBar = () => (
     <div className="w-full bg-gray-200 rounded-full h-2 mb-8">
@@ -41,7 +88,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ isOpen, onClose }) =
         <div className="p-6">
           {renderProgressBar()}
           
-          <form name="property-inquiry" method="POST" data-netlify="true">
+          <form name="property-inquiry" method="POST" data-netlify="true" onSubmit={handleSubmit}>
             <input type="hidden" name="form-name" value="property-inquiry" />
             
             {step === 1 && (
@@ -55,6 +102,8 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ isOpen, onClose }) =
                     <input
                       type="text"
                       name="address"
+                      value={formData.address}
+                      onChange={handleInputChange}
                       required
                       className="input-field"
                       placeholder="Street address"
@@ -67,6 +116,8 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ isOpen, onClose }) =
                     <input
                       type="text"
                       name="city"
+                      value={formData.city}
+                      onChange={handleInputChange}
                       required
                       className="input-field"
                     />
@@ -78,6 +129,8 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ isOpen, onClose }) =
                     <input
                       type="text"
                       name="state"
+                      value={formData.state}
+                      onChange={handleInputChange}
                       required
                       className="input-field"
                     />
@@ -89,6 +142,8 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ isOpen, onClose }) =
                     <input
                       type="text"
                       name="zipCode"
+                      value={formData.zipCode}
+                      onChange={handleInputChange}
                       required
                       className="input-field"
                     />
@@ -108,6 +163,8 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ isOpen, onClose }) =
                     <input
                       type="number"
                       name="yearBuilt"
+                      value={formData.yearBuilt}
+                      onChange={handleInputChange}
                       required
                       className="input-field"
                     />
@@ -119,6 +176,8 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ isOpen, onClose }) =
                     <input
                       type="number"
                       name="squareFootage"
+                      value={formData.squareFootage}
+                      onChange={handleInputChange}
                       required
                       className="input-field"
                     />
@@ -127,7 +186,13 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ isOpen, onClose }) =
                     <label className="block text-sm font-medium text-gray-700 mb-1">
                       Bedrooms
                     </label>
-                    <select name="bedrooms" required className="input-field">
+                    <select 
+                      name="bedrooms" 
+                      value={formData.bedrooms}
+                      onChange={handleInputChange}
+                      required 
+                      className="input-field"
+                    >
                       {[1,2,3,4,5,6].map(num => (
                         <option key={num} value={num}>{num}</option>
                       ))}
@@ -138,7 +203,13 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ isOpen, onClose }) =
                     <label className="block text-sm font-medium text-gray-700 mb-1">
                       Bathrooms
                     </label>
-                    <select name="bathrooms" required className="input-field">
+                    <select 
+                      name="bathrooms"
+                      value={formData.bathrooms}
+                      onChange={handleInputChange}
+                      required 
+                      className="input-field"
+                    >
                       {[1,1.5,2,2.5,3,3.5,4].map(num => (
                         <option key={num} value={num}>{num}</option>
                       ))}
@@ -149,7 +220,13 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ isOpen, onClose }) =
                     <label className="block text-sm font-medium text-gray-700 mb-1">
                       Property Condition
                     </label>
-                    <select name="condition" required className="input-field">
+                    <select 
+                      name="condition"
+                      value={formData.condition}
+                      onChange={handleInputChange}
+                      required 
+                      className="input-field"
+                    >
                       <option value="excellent">Excellent</option>
                       <option value="good">Good</option>
                       <option value="fair">Fair</option>
@@ -171,6 +248,8 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ isOpen, onClose }) =
                     <input
                       type="text"
                       name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
                       required
                       className="input-field"
                     />
@@ -182,6 +261,8 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ isOpen, onClose }) =
                     <input
                       type="email"
                       name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
                       required
                       className="input-field"
                     />
@@ -193,6 +274,8 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ isOpen, onClose }) =
                     <input
                       type="tel"
                       name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
                       required
                       className="input-field"
                     />
@@ -203,6 +286,8 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ isOpen, onClose }) =
                     </label>
                     <textarea
                       name="notes"
+                      value={formData.notes}
+                      onChange={handleInputChange}
                       rows={4}
                       className="input-field"
                       placeholder="Any additional information about your property..."
