@@ -23,14 +23,14 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ isOpen, onClose }) =
     phone: '',
     notes: ''
   });
-  
+
   if (!isOpen) return null;
 
   const totalSteps = 3;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     try {
       const response = await fetch('/', {
         method: 'POST',
@@ -40,7 +40,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ isOpen, onClose }) =
           ...formData
         }).toString()
       });
-      
+
       if (response.ok) {
         alert('Thank you for your submission! We will contact you soon.');
         onClose();
