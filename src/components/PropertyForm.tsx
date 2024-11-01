@@ -88,23 +88,17 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ isOpen, onClose }) =
         <div className="p-6">
           {renderProgressBar()}
           
-          <form
-            name="property-inquiry"
-            method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            onSubmit={handleSubmit}
-          >
+          <form onSubmit={handleSubmit} className="space-y-6">
             <input type="hidden" name="form-name" value="property-inquiry" />
             <input type="hidden" name="bot-field" />
             
             {step === 1 && (
-              <div className="space-y-6">
-                <h3 className="text-xl font-semibold text-darkblue-900 mb-4">Property Address</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="col-span-2">
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-darkblue-900">Property Address</h3>
+                <div className="space-y-4">
+                  <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Full Address
+                      Street Address
                     </label>
                     <input
                       type="text"
@@ -112,48 +106,50 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ isOpen, onClose }) =
                       value={formData.address}
                       onChange={handleInputChange}
                       required
-                      className="input-field"
-                      placeholder="Street address"
+                      className="input-field text-gray-900"
+                      placeholder="Enter your street address"
                     />
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      City
-                    </label>
-                    <input
-                      type="text"
-                      name="city"
-                      value={formData.city}
-                      onChange={handleInputChange}
-                      required
-                      className="input-field"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      State
-                    </label>
-                    <input
-                      type="text"
-                      name="state"
-                      value={formData.state}
-                      onChange={handleInputChange}
-                      required
-                      className="input-field"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Zip Code
-                    </label>
-                    <input
-                      type="text"
-                      name="zipCode"
-                      value={formData.zipCode}
-                      onChange={handleInputChange}
-                      required
-                      className="input-field"
-                    />
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        City
+                      </label>
+                      <input
+                        type="text"
+                        name="city"
+                        value={formData.city}
+                        onChange={handleInputChange}
+                        required
+                        className="input-field text-gray-900"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        State
+                      </label>
+                      <input
+                        type="text"
+                        name="state"
+                        value={formData.state}
+                        onChange={handleInputChange}
+                        required
+                        className="input-field text-gray-900"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        ZIP Code
+                      </label>
+                      <input
+                        type="text"
+                        name="zipCode"
+                        value={formData.zipCode}
+                        onChange={handleInputChange}
+                        required
+                        className="input-field text-gray-900"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -304,7 +300,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ isOpen, onClose }) =
               </div>
             )}
 
-            <div className="mt-8 flex justify-between">
+            <div className="flex justify-between pt-6">
               {step > 1 && (
                 <button
                   type="button"
@@ -327,7 +323,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ isOpen, onClose }) =
                   type="submit"
                   className="btn-primary ml-auto"
                 >
-                  Submit
+                  Get Your Cash Offer
                 </button>
               )}
             </div>

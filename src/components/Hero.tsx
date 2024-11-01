@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, Clock, DollarSign, Shield } from 'lucide-react';
+import { ArrowRight, Clock, DollarSign, Shield, Truck } from 'lucide-react';
 import { PropertyForm } from './PropertyForm';
 
 export const Hero = () => {
@@ -35,23 +35,37 @@ export const Hero = () => {
               Get Your Cash Offer Now
               <ArrowRight className="inline-block ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="btn-secondary text-lg">
+            <button 
+              className="btn-secondary text-lg"
+              onClick={() => setIsFormOpen(true)}
+            >
               Learn How It Works
             </button>
           </div>
 
           {/* Feature Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
+            <div className="bg-blue-600/20 backdrop-blur-lg p-6 rounded-xl border border-blue-400/30 relative group hover:scale-105 transition-all duration-300">
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-3 py-0.5 rounded-full text-xs font-medium">
+                Special Offer
+              </span>
+              <Truck className="h-10 w-10 text-blue-400 mx-auto mb-4" />
+              <h3 className="text-lg font-semibold mb-2">Moving Fees Covered</h3>
+              <p className="text-blue-100">We pay all moving expenses</p>
+            </div>
+
             <div className="bg-white/10 backdrop-blur-lg p-6 rounded-xl">
               <Clock className="h-10 w-10 text-blue-400 mx-auto mb-4" />
               <h3 className="text-lg font-semibold mb-2">Close in 7 Days</h3>
               <p className="text-blue-100">Quick closing on your timeline</p>
             </div>
+
             <div className="bg-white/10 backdrop-blur-lg p-6 rounded-xl">
               <DollarSign className="h-10 w-10 text-blue-400 mx-auto mb-4" />
               <h3 className="text-lg font-semibold mb-2">Fair Cash Offer</h3>
               <p className="text-blue-100">No hidden fees or commissions</p>
             </div>
+
             <div className="bg-white/10 backdrop-blur-lg p-6 rounded-xl">
               <Shield className="h-10 w-10 text-blue-400 mx-auto mb-4" />
               <h3 className="text-lg font-semibold mb-2">Any Condition</h3>
@@ -61,6 +75,7 @@ export const Hero = () => {
         </div>
       </div>
 
+      {/* Property Form Modal */}
       <PropertyForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
     </div>
   );

@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Home, Clock, DollarSign, Shield } from 'lucide-react';
+import { PropertyForm } from './PropertyForm';
 
 export const DistressedHomes = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
   return (
     <div className="bg-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -39,11 +42,19 @@ export const DistressedHomes = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <button className="btn-primary text-lg">
+          <button 
+            onClick={() => setIsFormOpen(true)}
+            className="btn-primary text-lg"
+          >
             Get Your Cash Offer Now
           </button>
         </div>
       </div>
+
+      <PropertyForm 
+        isOpen={isFormOpen}
+        onClose={() => setIsFormOpen(false)}
+      />
     </div>
   );
 };
