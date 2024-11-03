@@ -17,10 +17,15 @@ export const EbookSection = () => {
             />
             <h3 className="text-2xl font-bold mb-4 text-darkblue-900">The Ultimate Guide to Free Home Sales</h3>
             <p className="text-gray-600 mb-6">Learn how to sell your home quickly and efficiently without any hassle.</p>
-            <button className="btn-primary w-full flex items-center justify-center">
+            <a 
+              href="https://drive.google.com/file/d/1CpaBmws1OtmhrVB28-_DxnqNZCPHmtLQ/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary w-full flex items-center justify-center"
+            >
               <Download className="h-5 w-5 mr-2" strokeWidth={1.5} />
               Download Now
-            </button>
+            </a>
           </div>
 
           {/* Second E-book (Coming Soon) */}

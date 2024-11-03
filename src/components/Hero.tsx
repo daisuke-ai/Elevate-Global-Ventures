@@ -56,9 +56,9 @@ export const Hero = () => {
                 <Shield className="h-5 w-5 inline-block mr-2" />
                 Any Condition
               </div>
-              <div className="text-blue-100">
-                <Calculator className="h-5 w-5 inline-block mr-2" />
-                No Fees
+              <div className="text-blue-50 bg-blue-500/40 rounded-lg px-2 py-1 border border-blue-400/50 animate-pulse">
+                <DollarSign className="h-5 w-5 inline-block mr-2" />
+                Free Moving! 🎁
               </div>
             </div>
             <button 
