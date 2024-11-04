@@ -3,7 +3,6 @@ import { Navbar } from '../components/Navbar';
 import { Hero } from '../components/Hero';
 import { Stats } from '../components/Stats';
 import { DistressedHomes } from '../components/DistressedHomes';
-import { PrivateLending } from '../components/PrivateLending';
 import { HowItWorks } from '../components/HowItWorks';
 import { Testimonials } from '../components/Testimonials';
 import { EbookSection } from '../components/EbookSection';
@@ -16,7 +15,6 @@ const Home = () => {
       <Hero />
       <Stats />
       <DistressedHomes />
-      <PrivateLending />
       <HowItWorks />
       <Testimonials />
       <EbookSection />
