@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, Clock, DollarSign, Shield, Truck } from 'lucide-react';
 import { PropertyForm } from './PropertyForm';
+import { Link } from 'react-router-dom';
 
 export const Hero = () => {
   const [isPropertyFormOpen, setIsPropertyFormOpen] = useState(false);
@@ -37,9 +38,9 @@ export const Hero = () => {
               Get Your Cash Offer Now
               <ArrowRight className="inline-block ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="btn-secondary text-lg">
+            <Link to="/services" className="btn-secondary text-lg">
               Learn How It Works
-            </button>
+            </Link>
           </div>
         </div>
 

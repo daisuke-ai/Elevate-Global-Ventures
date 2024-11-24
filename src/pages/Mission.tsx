@@ -2,6 +2,7 @@ import React from 'react';
 import { Globe2, Users, Wallet, Building, Star, ArrowRight } from 'lucide-react';
 import { Navbar } from '../components/Navbar';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 
 const Mission = () => {
   const testimonials = [
@@ -47,10 +48,13 @@ const Mission = () => {
               offering support that fosters resilience, connection, and opportunity. We believe that every individual, 
               regardless of background, should have the resources to thrive and contribute to a vibrant, inclusive future.
             </p>
-            <button className="inline-flex items-center justify-center px-6 py-3 text-base sm:text-lg font-medium rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 group">
+            <Link 
+              to="/services" 
+              className="inline-flex items-center justify-center px-6 py-3 text-base sm:text-lg font-medium rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 group"
+            >
               <span>Join Our Mission</span>
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-            </button>
+            </Link>
           </div>
         </div>
 

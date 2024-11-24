@@ -87,7 +87,7 @@ const Contact = () => {
           <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
             <Mail className="h-12 w-12 text-blue-600 mb-4" />
             <h3 className="text-xl font-semibold text-darkblue-900 mb-2">Email Us</h3>
-            <p className="text-gray-600">info@elevateglobal.com</p>
+            <p className="text-gray-600">info@elevateglobalventures.com</p>
             <p className="text-gray-500 text-sm mt-2">We'll respond within 24 hours</p>
           </div>
 
