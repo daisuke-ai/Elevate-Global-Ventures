@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
         <div className="mt-8 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-300">&copy; 2024 Elevate Global Ventures Group. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">
+            <a href="https://www.facebook.com/QuickSellEGV" className="text-gray-300 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
               <Facebook className="w-6 h-6" />
             </a>
             <a href="#" className="text-gray-300 hover:text-white transition-colors">
