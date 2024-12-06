@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Get Involved</h3>
             <p className="text-gray-300 mb-4">Join us in our mission to create lasting impact and empower communities worldwide.</p>
-            <button className="btn-primary">Contact Us</button>
+            <a href="/contact" className="btn-primary">Contact Us</a>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
