@@ -63,6 +63,10 @@ export const Navbar = () => {
               <Phone className="h-5 w-5 mr-1" />
               Contact Us
             </NavLink>
+            <NavLink to="/blog">
+              <Globe className="h-5 w-5 mr-1" />
+              Blog
+            </NavLink>
           </div>
 
           {/* Mobile Menu Button */}
@@ -99,6 +103,10 @@ export const Navbar = () => {
               <Link to="/contact" className="block text-darkblue-800 px-3 py-2 rounded-md text-base font-medium">
                 <Phone className="h-5 w-5 mr-1 inline" />
                 Contact Us
+              </Link>
+              <Link to="/blog" className="block text-darkblue-800 px-3 py-2 rounded-md text-base font-medium">
+                <Globe className="h-5 w-5 mr-1 inline" />
+                Blog
               </Link>
             </div>
           </div>
