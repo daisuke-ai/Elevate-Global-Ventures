@@ -89,7 +89,7 @@ const PrivacyPolicy = () => {
               If you have questions or concerns about this Privacy Policy, please contact us at:
             </p>
             <div className="bg-gray-50 p-4 rounded-lg">
-              <p className="text-blue-600 font-medium">Email: info@elevateglobalventures.com</p>
+              <p className="text-blue-600 font-medium">Email: Dayana@ElevateGlobalVentures.com</p>
             </div>
           </div>
         </div>
