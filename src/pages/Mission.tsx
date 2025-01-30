@@ -44,9 +44,10 @@ const Mission = () => {
               Empowering Communities,<br className="hidden sm:block" />Preserving Heritage
             </h1>
             <p className="text-lg sm:text-xl text-blue-100 mb-8 sm:mb-12 leading-relaxed px-4 sm:px-0">
-              At Elevate Global Ventures, we're dedicated to empowering underserved families and Haitian migrants, 
-              offering support that fosters resilience, connection, and opportunity. We believe that every individual, 
-              regardless of background, should have the resources to thrive and contribute to a vibrant, inclusive future.
+              At Elevate Global Ventures, we empower homeowners to take control of their futures by providing strategic solutions 
+              that preserve properties, protect generational wealth, and revitalize communities. Through innovative real estate 
+              investment and funding solutions, we turn challenges into opportunities—helping homeowners overcome obstacles, 
+              unlock value, and build a stronger foundation for the future.
             </p>
             <Link 
               to="/services" 
