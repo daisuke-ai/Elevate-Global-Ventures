@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Building2, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface LoanFormProps {
   isOpen: boolean;
@@ -19,7 +20,9 @@ export const LoanForm: React.FC<LoanFormProps> = ({ isOpen, onClose }) => {
     name: '',
     email: '',
     phone: '',
-    additionalInfo: ''
+    additionalInfo: '',
+    marketingConsent: false,
+    nonMarketingConsent: false
   });
 
   if (!isOpen) return null;
@@ -51,10 +54,11 @@ export const LoanForm: React.FC<LoanFormProps> = ({ isOpen, onClose }) => {
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value, type } = e.target;
+    const newValue = type === 'checkbox' ? (e.target as HTMLInputElement).checked : value;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: newValue
     }));
   };
 
@@ -268,6 +272,41 @@ export const LoanForm: React.FC<LoanFormProps> = ({ isOpen, onClose }) => {
                       placeholder="Any additional details about your investment plans..."
                     ></textarea>
                   </div>
+                </div>
+                
+                <div className="space-y-3 pt-4">
+                  <div className="flex items-start">
+                    <input
+                      id="marketingConsent"
+                      name="marketingConsent"
+                      type="checkbox"
+                      checked={formData.marketingConsent}
+                      onChange={handleInputChange}
+                      className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 mt-1 mr-3"
+                    />
+                    <label htmlFor="marketingConsent" className="text-sm text-gray-600">
+                      I consent to receive marketing text messages from Elevate Global Ventures Group at the phone number provided. Frequency may vary. Message & data rates may apply. Text HELP for assistance, reply STOP to opt out.
+                    </label>
+                  </div>
+                  <div className="flex items-start">
+                    <input
+                      id="nonMarketingConsent"
+                      name="nonMarketingConsent"
+                      type="checkbox"
+                      checked={formData.nonMarketingConsent}
+                      onChange={handleInputChange}
+                      className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 mt-1 mr-3"
+                    />
+                    <label htmlFor="nonMarketingConsent" className="text-sm text-gray-600">
+                      I consent to receive non-marketing text messages from Elevate Global Ventures Group about my order updates, appointment reminders etc. Message & data rates may apply.
+                    </label>
+                  </div>
+                </div>
+
+                <div className="pt-2">
+                  <Link to="/privacy-policy" className="text-sm text-blue-600 hover:underline">
+                    Terms of Service & Privacy Policy
+                  </Link>
                 </div>
               </div>
             )}
