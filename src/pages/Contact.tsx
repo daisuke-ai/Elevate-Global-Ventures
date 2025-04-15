@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Navbar } from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Mail, Phone, MapPin, MessageSquare, Clock, Globe, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,7 +10,9 @@ const Contact = () => {
     email: '',
     phone: '',
     subject: 'general',
-    message: ''
+    message: '',
+    marketingConsent: false,
+    nonMarketingConsent: false
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -31,7 +34,9 @@ const Contact = () => {
           email: '',
           phone: '',
           subject: 'general',
-          message: ''
+          message: '',
+          marketingConsent: false,
+          nonMarketingConsent: false
         });
       } else {
         throw new Error('Form submission failed');
@@ -42,10 +47,11 @@ const Contact = () => {
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value, type } = e.target;
+    const newValue = type === 'checkbox' ? (e.target as HTMLInputElement).checked : value;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: newValue
     }));
   };
 
@@ -210,9 +216,46 @@ const Contact = () => {
                 ></textarea>
               </div>
 
+              {/* Consent Checkboxes */}
+              <div className="space-y-3 pt-4">
+                <div className="flex items-start">
+                  <input
+                    id="marketingConsent"
+                    name="marketingConsent"
+                    type="checkbox"
+                    checked={formData.marketingConsent}
+                    onChange={handleChange}
+                    className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 mt-1 mr-3"
+                  />
+                  <label htmlFor="marketingConsent" className="text-sm text-gray-600">
+                    I consent to receive marketing text messages from Elevate Global Ventures Group at the phone number provided. Frequency may vary. Message & data rates may apply. Text HELP for assistance, reply STOP to opt out.
+                  </label>
+                </div>
+                <div className="flex items-start">
+                  <input
+                    id="nonMarketingConsent"
+                    name="nonMarketingConsent"
+                    type="checkbox"
+                    checked={formData.nonMarketingConsent}
+                    onChange={handleChange}
+                    className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 mt-1 mr-3"
+                  />
+                  <label htmlFor="nonMarketingConsent" className="text-sm text-gray-600">
+                    I consent to receive non-marketing text messages from Elevate Global Ventures Group about my order updates, appointment reminders etc. Message & data rates may apply.
+                  </label>
+                </div>
+              </div>
+
+              {/* Terms Link */}
+              <div className="pt-2">
+                <Link to="/privacy-policy" className="text-sm text-blue-600 hover:underline">
+                  Terms of Service & Privacy Policy
+                </Link>
+              </div>
+
               <button 
                 type="submit" 
-                className="btn-primary w-full group flex items-center justify-center"
+                className="btn-primary w-full group flex items-center justify-center mt-6"
               >
                 Send Message
                 <ArrowRight className="inline-block ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
