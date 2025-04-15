@@ -333,9 +333,13 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ isOpen, onClose }) =
                 </div>
 
                 {/* Terms Link */}
-                <div className="pt-2">
-                  <Link to="/privacy-policy" className="text-sm text-blue-600 hover:underline">
-                    Terms of Service & Privacy Policy
+                <div className="pt-2 text-sm">
+                  <Link to="/privacy-policy" className="text-blue-600 hover:underline">
+                    Privacy Policy
+                  </Link>
+                  <span className="mx-2 text-gray-400">|</span>
+                  <Link to="/terms-and-conditions" className="text-blue-600 hover:underline">
+                    Terms of Service
                   </Link>
                 </div>
               </div>

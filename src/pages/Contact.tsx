@@ -1,60 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Navbar } from '../components/Navbar';
 import Footer from '../components/Footer';
-import { Mail, Phone, MapPin, MessageSquare, Clock, Globe, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Mail, Phone, MapPin, MessageSquare, Clock, Globe } from 'lucide-react';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: 'general',
-    message: '',
-    marketingConsent: false,
-    nonMarketingConsent: false
-  });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    try {
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
-          'form-name': 'contact',
-          ...formData
-        }).toString()
-      });
-
-      if (response.ok) {
-        alert('Thank you for your message! We will get back to you soon.');
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          subject: 'general',
-          message: '',
-          marketingConsent: false,
-          nonMarketingConsent: false
-        });
-      } else {
-        throw new Error('Form submission failed');
-      }
-    } catch (error) {
-      alert('Sorry, there was an error submitting your form. Please try again.');
-    }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value, type } = e.target;
-    const newValue = type === 'checkbox' ? (e.target as HTMLInputElement).checked : value;
-    setFormData(prev => ({
-      ...prev,
-      [name]: newValue
-    }));
-  };
-
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
@@ -107,161 +56,53 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Contact Form Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
-            <h2 className="text-3xl font-bold text-darkblue-900 mb-6">Send Us a Message</h2>
-            <p className="text-gray-600 mb-8">
-              Whether you're looking to sell your property, need financing, or just want to learn more about our services,
-              we're here to help. Fill out the form below and we'll get back to you as soon as possible.
-            </p>
-            
-            <div className="space-y-6">
-              <div className="flex items-center space-x-4 text-gray-600">
-                <Clock className="h-6 w-6 text-blue-600" />
-                <span>Quick Response Time</span>
-              </div>
-              <div className="flex items-center space-x-4 text-gray-600">
-                <MessageSquare className="h-6 w-6 text-blue-600" />
-                <span>Professional Support</span>
-              </div>
-              <div className="flex items-center space-x-4 text-gray-600">
-                <Globe className="h-6 w-6 text-blue-600" />
-                <span>Serving All of Hawaii</span>
-              </div>
+      {/* Contact Form Section - Rearranged Layout */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        {/* Text Content Above Form */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-darkblue-900 mb-4">Send Us a Message</h2>
+          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+            Whether you're looking to sell your property, need financing, or just want to learn more about our services,
+            we're here to help. Fill out the form below and we'll get back to you as soon as possible.
+          </p>
+          
+          {/* Features List - Centered */}
+          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-600">
+            <div className="flex items-center justify-center space-x-2">
+              <Clock className="h-5 w-5 text-blue-600" />
+              <span>Quick Response Time</span>
+            </div>
+            <div className="flex items-center justify-center space-x-2">
+              <MessageSquare className="h-5 w-5 text-blue-600" />
+              <span>Professional Support</span>
+            </div>
+            <div className="flex items-center justify-center space-x-2">
+              <Globe className="h-5 w-5 text-blue-600" />
+              <span>Serving All of Hawaii</span>
             </div>
           </div>
+        </div>
 
-          <div className="bg-white rounded-xl shadow-lg p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <input type="hidden" name="form-name" value="contact" />
-              
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="input-field"
-                  placeholder="John Doe"
-                />
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="input-field"
-                    placeholder="john@example.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Phone
-                  </label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                    className="input-field"
-                    placeholder="(808) 123-4567"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Subject
-                </label>
-                <select
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="input-field"
+        {/* Embedded Form Container - Full Width in this section */}
+        <div className="bg-white rounded-xl shadow-lg p-4 md:p-6">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/6XeSDCBDkQDwf2Gv2p9J"
+            style={{width:'100%', height:'744px', border:'none', borderRadius:'3px'}}
+            id="inline-6XeSDCBDkQDwf2Gv2p9J" 
+            data-layout='{"id":"INLINE"}'
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Form 3"
+            data-layout-iframe-id="inline-6XeSDCBDkQDwf2Gv2p9J"
+            data-form-id="6XeSDCBDkQDwf2Gv2p9J"
+            title="Form 3"
                 >
-                  <option value="general">General Inquiry</option>
-                  <option value="sell">Selling Property</option>
-                  <option value="loan">Loan Information</option>
-                  <option value="support">Support</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Message
-                </label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={4}
-                  className="input-field"
-                  placeholder="How can we help you?"
-                ></textarea>
-              </div>
-
-              {/* Consent Checkboxes */}
-              <div className="space-y-3 pt-4">
-                <div className="flex items-start">
-                  <input
-                    id="marketingConsent"
-                    name="marketingConsent"
-                    type="checkbox"
-                    checked={formData.marketingConsent}
-                    onChange={handleChange}
-                    className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 mt-1 mr-3"
-                  />
-                  <label htmlFor="marketingConsent" className="text-sm text-gray-600">
-                    I consent to receive marketing text messages from Elevate Global Ventures Group at the phone number provided. Frequency may vary. Message & data rates may apply. Text HELP for assistance, reply STOP to opt out.
-                  </label>
-                </div>
-                <div className="flex items-start">
-                  <input
-                    id="nonMarketingConsent"
-                    name="nonMarketingConsent"
-                    type="checkbox"
-                    checked={formData.nonMarketingConsent}
-                    onChange={handleChange}
-                    className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 mt-1 mr-3"
-                  />
-                  <label htmlFor="nonMarketingConsent" className="text-sm text-gray-600">
-                    I consent to receive non-marketing text messages from Elevate Global Ventures Group about my order updates, appointment reminders etc. Message & data rates may apply.
-                  </label>
-                </div>
-              </div>
-
-              {/* Terms Link */}
-              <div className="pt-2">
-                <Link to="/privacy-policy" className="text-sm text-blue-600 hover:underline">
-                  Terms of Service & Privacy Policy
-                </Link>
-              </div>
-
-              <button 
-                type="submit" 
-                className="btn-primary w-full group flex items-center justify-center mt-6"
-              >
-                Send Message
-                <ArrowRight className="inline-block ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </form>
-          </div>
+          </iframe>
+          <script src="https://link.msgsndr.com/js/form_embed.js"></script>
         </div>
       </div>
 
