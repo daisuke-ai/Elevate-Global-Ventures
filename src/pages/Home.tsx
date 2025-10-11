@@ -6,6 +6,7 @@ import { DistressedHomes } from '../components/DistressedHomes';
 import { HowItWorks } from '../components/HowItWorks';
 import { Testimonials } from '../components/Testimonials';
 import { EbookSection } from '../components/EbookSection';
+import EVGAI from '../components/EVGAI';
 import Footer from '../components/Footer';
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
       <HowItWorks />
       <Testimonials />
       <EbookSection />
+      <EVGAI />
       <Footer />
     </div>
   );
