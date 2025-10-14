@@ -89,30 +89,23 @@ const About = () => {
           <h2 className="text-3xl font-bold text-center text-darkblue-900 mb-12">Meet Our Team</h2>
           
           {/* Team Member Card */}
-          <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
-            <div className="md:flex">
-              <div className="md:flex-shrink-0">
-                <img 
-                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                  alt="Dayana Lynch" 
-                  className="h-96 w-full md:w-96 object-cover"
-                />
-              </div>
-              <div className="p-8">
-                <div className="uppercase tracking-wide text-sm text-blue-600 font-semibold">Real Estate Consultant</div>
-                <h3 className="mt-2 text-2xl font-semibold text-darkblue-900">Dayana Lynch</h3>
-                <p className="mt-4 text-gray-600 leading-relaxed">
-                  A visionary real estate consultant and community advocate with experience flipping and 
-                  renovating over 22 properties and managing a portfolio of 55 rentals. Through Zaka 
-                  Properties in the Dominican Republic, Dayana brings international expertise in buying, 
-                  selling, and managing properties.
-                </p>
-                <p className="mt-4 text-gray-600 leading-relaxed">
-                  Her innovative approach includes integrating home farming into new developments, 
-                  promoting self-sufficiency and sustainable living. As a dedicated volunteer and 
-                  nonprofit collaborator, she's committed to empowering communities and fostering resilience.
-                </p>
-              </div>
+          <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden p-8">
+            <div className="md:flex-shrink-0 hidden">
+            </div>
+            <div className="p-0">
+              <div className="uppercase tracking-wide text-sm text-blue-600 font-semibold">Real Estate Consultant</div>
+              <h3 className="mt-2 text-2xl font-semibold text-darkblue-900">Dayana Lynch</h3>
+              <p className="mt-4 text-gray-600 leading-relaxed">
+                A visionary real estate consultant and community advocate with experience flipping and 
+                renovating over 22 properties and managing a portfolio of 55 rentals. Through Zaka 
+                Properties in the Dominican Republic, Dayana brings international expertise in buying, 
+                selling, and managing properties.
+              </p>
+              <p className="mt-4 text-gray-600 leading-relaxed">
+                Her innovative approach includes integrating home farming into new developments, 
+                promoting self-sufficiency and sustainable living. As a dedicated volunteer and 
+                nonprofit collaborator, she's committed to empowering communities and fostering resilience.
+              </p>
             </div>
           </div>
         </div>

@@ -9,6 +9,9 @@ import BlogPage from './pages/Blog';
 import BlogPostPage from './pages/BlogPost';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsAndConditions from './pages/TermsAndConditions';
+import StaffingPage from './pages/StaffingPage'; // Placeholder for the new staffing page
+import TaxPage from './pages/TaxPage'; // Placeholder for the new tax page
+import RealEstateSupportPage from './pages/RealEstateSupportPage'; // Placeholder for the new real estate support page
 
 
 function App() {
@@ -24,6 +27,9 @@ function App() {
         <Route path="/blog/:id" element={<BlogPostPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="/staffing" element={<StaffingPage />} />
+        <Route path="/tax" element={<TaxPage />} />
+        <Route path="/real-estate-support" element={<RealEstateSupportPage />} />
       </Routes>
     </Router>
   );
