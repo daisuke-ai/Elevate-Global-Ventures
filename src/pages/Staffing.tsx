@@ -1,10 +1,10 @@
 import { Navbar } from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
-import { ArrowRight, FileText, Users, Calendar, Building2, ClipboardCheck, MessageSquare, CheckCircle2, Clock, Shield, TrendingUp } from 'lucide-react';
+import { ArrowRight, Users, Headphones, Target, Wrench, CheckCircle2, UserCheck, ClipboardCheck, TrendingUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
-const RealEstateSupportPage = () => {
+const Staffing = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -38,16 +38,16 @@ const RealEstateSupportPage = () => {
 
           <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent">
-              Real Estate Support That
+              Your Operations, Powered by
             </span>
             <br />
             <span className="bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-700 bg-clip-text text-transparent">
-              Scales Your Business
+              People Who Care
             </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Back-office coordination, data entry, and property management support for real estate teams who want to focus on closing deals.
+            Trained virtual assistants and call-center professionals that keep your business running — efficiently, reliably, and around the clock.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -63,7 +63,7 @@ const RealEstateSupportPage = () => {
               href="#services"
               className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-slate-900 text-lg font-semibold rounded-xl border-2 border-slate-300 hover:border-blue-600 hover:bg-blue-50 hover:scale-105 transition-all duration-300"
             >
-              View Our Services
+              Explore Our Services
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
@@ -78,8 +78,8 @@ const RealEstateSupportPage = () => {
             <div className="relative group">
               <div className="absolute -inset-4 bg-gradient-to-r from-slate-200 to-slate-100 rounded-3xl opacity-0 group-hover:opacity-100 blur-2xl transition-all duration-500"></div>
               <img
-                src="/images/Real estate professionals or agents working together.jpg"
-                alt="Real estate professionals working together"
+                src="/images/Call center team or virtual assistants working together.webp"
+                alt="Call center team professionals"
                 className="relative w-full rounded-2xl shadow-xl group-hover:shadow-2xl transition-shadow duration-300"
               />
             </div>
@@ -87,106 +87,106 @@ const RealEstateSupportPage = () => {
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent">
-                  Focus on Deals, Not Paperwork
+                  Why Choose Elevate Global Staffing
                 </span>
               </h2>
 
               <p className="text-lg text-slate-700 mb-6 leading-relaxed">
-                Real estate moves fast. You need a reliable back-office team that can keep up with transaction coordination, data entry, client follow-ups, and property management tasks without slowing you down.
+                We provide businesses with dedicated virtual assistants and call-center teams trained to handle your day-to-day tasks — from customer support and scheduling to lead management and follow-ups.
               </p>
 
               <p className="text-lg text-slate-700 mb-6 leading-relaxed">
-                Our virtual assistants are trained specifically for real estate operations, so you get seamless support that understands your industry and your workflow.
+                Our professionals are skilled, English-fluent, and trained to adapt quickly to your business systems.
               </p>
 
               <p className="text-lg text-slate-600 leading-relaxed">
-                From listing management to closing coordination, we handle the administrative heavy lifting so you can focus on building relationships and closing deals.
+                We handle recruitment, training, supervision, and performance monitoring, so you get a high-performing remote team without the overhead.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* What We Offer Section */}
       <section id="services" className="py-24 bg-slate-50 fade-in-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent">
-                Complete Real Estate Support
+                A Team That Works Like an Extension of Yours
               </span>
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Everything your real estate business needs to run smoothly
+              Comprehensive staffing solutions tailored to your business needs
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            {/* Transaction Coordination */}
+            {/* Virtual Assistants */}
             <div className="group bg-white border-2 border-slate-200 rounded-2xl p-8 hover:border-slate-900 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 bg-gradient-to-br from-amber-600 to-amber-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <FileText className="w-7 h-7 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">Transaction Coordination</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Manage contracts, deadlines, and documentation from listing to closing.
-              </p>
-            </div>
-
-            {/* CRM & Data Entry */}
-            <div className="group bg-white border-2 border-slate-200 rounded-2xl p-8 hover:border-slate-900 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 bg-gradient-to-br from-amber-600 to-amber-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <ClipboardCheck className="w-7 h-7 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">CRM & Data Entry</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Keep your database clean, organized, and up-to-date with accurate client information.
-              </p>
-            </div>
-
-            {/* Listing Management */}
-            <div className="group bg-white border-2 border-slate-200 rounded-2xl p-8 hover:border-slate-900 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 bg-gradient-to-br from-amber-600 to-amber-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Building2 className="w-7 h-7 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">Listing Management</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Upload, update, and syndicate listings across MLS and marketing platforms.
-              </p>
-            </div>
-
-            {/* Client Follow-Up */}
-            <div className="group bg-white border-2 border-slate-200 rounded-2xl p-8 hover:border-slate-900 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 bg-gradient-to-br from-amber-600 to-amber-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <MessageSquare className="w-7 h-7 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">Client Follow-Up</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Nurture leads and maintain relationships with consistent, personalized outreach.
-              </p>
-            </div>
-
-            {/* Scheduling & Calendar */}
-            <div className="group bg-white border-2 border-slate-200 rounded-2xl p-8 hover:border-slate-900 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 bg-gradient-to-br from-amber-600 to-amber-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Calendar className="w-7 h-7 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">Scheduling & Calendar</h3>
-              <p className="text-slate-600 leading-relaxed">
-                Coordinate showings, inspections, and appointments with clients and vendors.
-              </p>
-            </div>
-
-            {/* Property Management */}
-            <div className="group bg-white border-2 border-slate-200 rounded-2xl p-8 hover:border-slate-900 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 bg-gradient-to-br from-amber-600 to-amber-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-14 h-14 bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Users className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">Property Management</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">Virtual Assistants</h3>
               <p className="text-slate-600 leading-relaxed">
-                Tenant screening, lease management, maintenance coordination, and rent collection.
+                Handle admin, scheduling, inbox management, and data entry with precision and efficiency.
+              </p>
+            </div>
+
+            {/* Customer Support */}
+            <div className="group bg-white border-2 border-slate-200 rounded-2xl p-8 hover:border-slate-900 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Headphones className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">Customer Support Agents</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Manage calls, chats, and emails with empathy and professionalism to keep your customers happy.
+              </p>
+            </div>
+
+            {/* Lead Management */}
+            <div className="group bg-white border-2 border-slate-200 rounded-2xl p-8 hover:border-slate-900 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Target className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">Lead Management Specialists</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Nurture and qualify leads using your CRM to maximize conversion rates.
+              </p>
+            </div>
+
+            {/* Appointment Setters */}
+            <div className="group bg-white border-2 border-slate-200 rounded-2xl p-8 hover:border-slate-900 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <ClipboardCheck className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">Appointment Setters</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Keep your sales pipeline full and organized with strategic appointment scheduling.
+              </p>
+            </div>
+
+            {/* Tech Support */}
+            <div className="group bg-white border-2 border-slate-200 rounded-2xl p-8 hover:border-slate-900 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Wrench className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">Tech Support Staff</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Assist customers and troubleshoot software or systems with technical expertise.
+              </p>
+            </div>
+
+            {/* Flexible Solutions */}
+            <div className="group bg-white border-2 border-slate-200 rounded-2xl p-8 hover:border-slate-900 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <CheckCircle2 className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">Custom Solutions</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Need something specific? We can train staff for your unique business requirements.
               </p>
             </div>
 
@@ -194,15 +194,80 @@ const RealEstateSupportPage = () => {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
+      {/* How It Works Section */}
       <section className="py-24 bg-white fade-in-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent">
+                How It Works
+              </span>
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              A seamless process from onboarding to ongoing support
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            {/* Step 1 */}
+            <div className="group bg-white border-2 border-slate-200 rounded-2xl p-8 hover:border-slate-900 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-12 h-12 bg-gradient-to-br from-slate-900 to-slate-700 rounded-xl flex items-center justify-center mb-6 text-white font-bold text-xl">
+                1
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">We Learn Your Operations</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Understand your workflow, tools, and expectations to build the perfect team.
+              </p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="group bg-white border-2 border-slate-200 rounded-2xl p-8 hover:border-slate-900 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-12 h-12 bg-gradient-to-br from-slate-900 to-slate-700 rounded-xl flex items-center justify-center mb-6 text-white font-bold text-xl">
+                2
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">We Recruit & Train</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Source and train your staff to match your business tone and systems perfectly.
+              </p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="group bg-white border-2 border-slate-200 rounded-2xl p-8 hover:border-slate-900 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-12 h-12 bg-gradient-to-br from-slate-900 to-slate-700 rounded-xl flex items-center justify-center mb-6 text-white font-bold text-xl">
+                3
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">We Manage Performance</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Ongoing monitoring, reporting, and optimization for consistent results.
+              </p>
+            </div>
+
+            {/* Step 4 */}
+            <div className="group bg-white border-2 border-slate-200 rounded-2xl p-8 hover:border-slate-900 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-12 h-12 bg-gradient-to-br from-slate-900 to-slate-700 rounded-xl flex items-center justify-center mb-6 text-white font-bold text-xl">
+                4
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">You Focus on Growth</h3>
+              <p className="text-slate-600 leading-relaxed">
+                We handle the daily tasks so you can focus on scaling your business.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-24 bg-slate-50 fade-in-section">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent">
-                  Why Real Estate Teams Choose Us
+                  The Elevate Global Advantage
                 </span>
               </h2>
 
@@ -212,33 +277,21 @@ const RealEstateSupportPage = () => {
                     <CheckCircle2 className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">Industry-Trained Assistants</h3>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">English-Fluent Professionals</h3>
                     <p className="text-slate-600 leading-relaxed">
-                      Our team understands real estate workflows, terminology, and software.
+                      Clear communication for customer satisfaction and seamless collaboration.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                    <Clock className="w-6 h-6 text-blue-600" />
+                    <UserCheck className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">Fast Turnaround Times</h3>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">Fully Managed Teams</h3>
                     <p className="text-slate-600 leading-relaxed">
-                      We know transactions move quickly—our team keeps pace with your deals.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                    <Shield className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">Secure & Confidential</h3>
-                    <p className="text-slate-600 leading-relaxed">
-                      Your client data and transaction information is handled with strict confidentiality.
+                      We handle HR, training, and supervision—you just focus on results.
                     </p>
                   </div>
                 </div>
@@ -248,9 +301,21 @@ const RealEstateSupportPage = () => {
                     <TrendingUp className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">Scalable Support</h3>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">Scalable Solutions</h3>
                     <p className="text-slate-600 leading-relaxed">
-                      Grow your team as your business grows—no hiring headaches or overhead costs.
+                      Start small and scale up as your business grows—no long-term commitments.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                    <ClipboardCheck className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">Quality Assurance</h3>
+                    <p className="text-slate-600 leading-relaxed">
+                      Regular performance reviews and optimization to maintain excellence.
                     </p>
                   </div>
                 </div>
@@ -260,8 +325,8 @@ const RealEstateSupportPage = () => {
             <div className="relative group">
               <div className="absolute -inset-4 bg-gradient-to-r from-slate-200 to-slate-100 rounded-3xl opacity-0 group-hover:opacity-100 blur-2xl transition-all duration-500"></div>
               <img
-                src="/images/Modern real estate office workspace.jpg"
-                alt="Modern real estate office"
+                src="/images/Modern call center workspace setup.jpg"
+                alt="Modern call center workspace"
                 className="relative w-full rounded-2xl shadow-xl group-hover:shadow-2xl transition-shadow duration-300"
               />
             </div>
@@ -271,15 +336,15 @@ const RealEstateSupportPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-slate-50 fade-in-section">
+      <section className="py-24 bg-white fade-in-section">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent">
-              Ready to Scale Your Real Estate Business?
+              Ready to Build Your Dream Team?
             </span>
           </h2>
           <p className="text-xl text-slate-600 mb-10 leading-relaxed">
-            Let our expert virtual assistants handle the back-office work so you can focus on what you do best—closing deals and building relationships.
+            Let's discuss how our staffing solutions can help you scale efficiently and focus on what matters most—growing your business.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -307,4 +372,4 @@ const RealEstateSupportPage = () => {
   );
 };
 
-export default RealEstateSupportPage;
+export default Staffing;

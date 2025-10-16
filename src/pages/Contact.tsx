@@ -35,7 +35,7 @@ const Contact = () => {
           <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
             <Phone className="h-12 w-12 text-blue-600 mb-4" />
             <h3 className="text-xl font-semibold text-darkblue-900 mb-2">Call Us</h3>
-            <p className="text-gray-600">+1 (808) 123-4567</p>
+            <p className="text-gray-600">+1 808-427-1739</p>
             <p className="text-gray-500 text-sm mt-2">Monday - Friday: 9AM - 6PM HST</p>
           </div>
 
@@ -50,8 +50,8 @@ const Contact = () => {
             <MapPin className="h-12 w-12 text-blue-600 mb-4" />
             <h3 className="text-xl font-semibold text-darkblue-900 mb-2">Visit Us</h3>
             <p className="text-gray-600">200 N Vineyard Blvd</p>
-            <p className="text-gray-600">Ste. A325 A325 - 5603</p>
             <p className="text-gray-600">Honolulu, HI 96817</p>
+            <p className="text-gray-500 text-sm mt-2">Ste. A325 A325 - 5603</p>
           </div>
         </div>
       </div>

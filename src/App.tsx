@@ -9,7 +9,7 @@ import BlogPage from './pages/Blog';
 import BlogPostPage from './pages/BlogPost';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsAndConditions from './pages/TermsAndConditions';
-import StaffingPage from './pages/StaffingPage'; // Placeholder for the new staffing page
+import StaffingPage from './pages/Staffing'; // Staffing and Call Center services page
 import TaxPage from './pages/TaxPage'; // Placeholder for the new tax page
 import RealEstateSupportPage from './pages/RealEstateSupportPage'; // Placeholder for the new real estate support page
 

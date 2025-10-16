@@ -1,179 +1,303 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Calculator, FileText, Shield, DollarSign, CheckCircle, Briefcase } from 'lucide-react';
 import { Navbar } from '../components/Navbar';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Calculator, FileText, Users, PieChart, FileCheck, CheckCircle2, Clock, Shield, TrendingUp } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 const TaxPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll('.fade-in-section').forEach((el) => {
+      observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       <Navbar />
-      <main className="pt-20">
-        {/* Hero Section - Premium Split Layout */}
-        <section className="relative py-28 bg-gradient-to-b from-white via-blue-50/30 to-white overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center relative z-10 gap-12">
-            {/* Left: Main content */}
-            <div className="w-full md:w-1/2 text-left flex flex-col justify-center mb-12 md:mb-0">
-              <span className="uppercase tracking-widest text-xs md:text-sm font-bold text-blue-600 mb-3 inline-block">Sunrise Tax & Business Services</span>
-              <h1 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 bg-clip-text text-transparent leading-tight">
-                Smart, Simple Tax & Business Admin Support
-              </h1>
-              <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-lg">
-                Our bookkeeping and tax prep team helps small business owners stay compliant and focused on growth.
-              </p>
-              <ul className="space-y-4 mb-10">
-                <li className="flex items-center text-base md:text-lg text-gray-700">
-                  <span className="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-full p-2 mr-4">
-                    <Calculator className="h-5 w-5" />
-                  </span>
-                  Expert bookkeeping and tax preparation
-                </li>
-                <li className="flex items-center text-base md:text-lg text-gray-700">
-                  <span className="bg-gradient-to-br from-green-400 to-green-600 text-white rounded-full p-2 mr-4">
-                    <Shield className="h-5 w-5" />
-                  </span>
-                  Full compliance and audit protection
-                </li>
-                <li className="flex items-center text-base md:text-lg text-gray-700">
-                  <span className="bg-gradient-to-br from-yellow-400 to-yellow-600 text-white rounded-full p-2 mr-4">
-                    <DollarSign className="h-5 w-5" />
-                  </span>
-                  Maximize deductions and savings
-                </li>
-              </ul>
-              <Link to="/contact" className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-full font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 text-lg group">
-                Get a Free Tax Consultation <ArrowRight className="inline-block ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-            {/* Right: Tax/finance image */}
-            <div className="w-full md:w-1/2 flex justify-center relative">
+
+      {/* Hero Section */}
+      <section className="relative pt-40 pb-24 bg-gradient-to-b from-gray-50 to-white">
+        <div className={`max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+
+          <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent">
+              Your Finances
+            </span>
+            <br />
+            <span className="bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-700 bg-clip-text text-transparent">
+              Organized and Optimized
+            </span>
+          </h1>
+
+          <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+            Bookkeeping, tax prep, and small business admin support — handled efficiently, accurately, and always on time.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-sky-600 to-blue-700 text-white text-lg font-semibold rounded-xl hover:from-sky-700 hover:to-blue-800 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Schedule a Free Consultation
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+
+            <a
+              href="#services"
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-slate-900 text-lg font-semibold rounded-xl border-2 border-slate-300 hover:border-blue-600 hover:bg-blue-50 hover:scale-105 transition-all duration-300"
+            >
+              View Our Services
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* About the Service Section */}
+      <section id="about" className="py-24 bg-white fade-in-section">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            <div className="relative group">
+              <div className="absolute -inset-4 bg-gradient-to-r from-slate-200 to-slate-100 rounded-3xl opacity-0 group-hover:opacity-100 blur-2xl transition-all duration-500"></div>
               <img
-                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                alt="Professional tax and bookkeeping services"
-                className="rounded-[2.5rem] shadow-2xl w-full max-w-md md:max-w-lg border-8 border-white/70 object-cover object-center"
-                style={{marginTop: '0', marginBottom: '0'}}
+                src="/images/Professional accountant reviewing documents on a laptop.jpg"
+                alt="Professional accountant reviewing documents"
+                className="relative w-full rounded-2xl shadow-xl group-hover:shadow-2xl transition-shadow duration-300"
               />
             </div>
-          </div>
-        </section>
 
-        {/* Services & Process - Combined Section */}
-        <section className="py-28 relative bg-gradient-to-b from-white via-blue-50/30 to-white overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.06),transparent_60%)]"></div>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <h2 className="text-4xl md:text-5xl font-bold text-center bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 bg-clip-text text-transparent mb-16">Our Tax Services</h2>
-            
-            {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-              {/* Service Card 1: Tax Preparation */}
-              <div className="bg-white rounded-3xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-500 hover:shadow-2xl border border-gray-100 hover:border-blue-300 hover:-translate-y-2 group">
-                <div className="bg-gradient-to-br from-blue-500 to-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <FileText className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Tax Preparation</h3>
-                <p className="text-gray-600 mb-8 flex-grow leading-relaxed">Individual and business tax returns with maximum deductions.</p>
-                <div className="w-full bg-blue-50 rounded-full p-2">
-                  <div className="bg-blue-500 text-white text-sm font-medium px-3 py-1 rounded-full">Most Popular</div>
-                </div>
-              </div>
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                <span className="bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent">
+                  Numbers Don't Have to Be Stressful
+                </span>
+              </h2>
 
-              {/* Service Card 2: Bookkeeping */}
-              <div className="bg-white rounded-3xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-500 hover:shadow-2xl border border-gray-100 hover:border-blue-300 hover:-translate-y-2 group">
-                <div className="bg-gradient-to-br from-green-500 to-green-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Calculator className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Bookkeeping</h3>
-                <p className="text-gray-600 mb-8 flex-grow leading-relaxed">Monthly financial tracking and reporting for your business.</p>
-                <div className="w-full bg-green-50 rounded-full p-2">
-                  <div className="bg-green-500 text-white text-sm font-medium px-3 py-1 rounded-full">Ongoing Support</div>
-                </div>
-              </div>
+              <p className="text-lg text-slate-700 mb-6 leading-relaxed">
+                We take the weight of financial management off your shoulders. Our expert team of bookkeepers and tax specialists ensures that your business stays compliant, organized, and ready for growth.
+              </p>
 
-              {/* Service Card 3: Business Setup */}
-              <div className="bg-white rounded-3xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-500 hover:shadow-2xl border border-gray-100 hover:border-blue-300 hover:-translate-y-2 group">
-                <div className="bg-gradient-to-br from-yellow-500 to-orange-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Briefcase className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Business Setup</h3>
-                <p className="text-gray-600 mb-8 flex-grow leading-relaxed">LLC formation, EIN registration, and business structure guidance.</p>
-                <div className="w-full bg-yellow-50 rounded-full p-2">
-                  <div className="bg-yellow-500 text-white text-sm font-medium px-3 py-1 rounded-full">New Business</div>
-                </div>
-              </div>
-
-              {/* Service Card 4: Audit Support */}
-              <div className="bg-white rounded-3xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-500 hover:shadow-2xl border border-gray-100 hover:border-blue-300 hover:-translate-y-2 group">
-                <div className="bg-gradient-to-br from-purple-500 to-pink-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Shield className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Audit Support</h3>
-                <p className="text-gray-600 mb-8 flex-grow leading-relaxed">Professional representation and documentation for IRS audits.</p>
-                <div className="w-full bg-purple-50 rounded-full p-2">
-                  <div className="bg-purple-500 text-white text-sm font-medium px-3 py-1 rounded-full">Protection</div>
-                </div>
-              </div>
-            </div>
-
-            {/* How It Works Timeline */}
-            <div className="relative">
-              <h3 className="text-3xl md:text-4xl font-bold text-center bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 bg-clip-text text-transparent mb-16">How It Works</h3>
-              <div className="flex flex-col md:flex-row justify-between items-center md:space-x-12 relative z-10">
-                {/* Stepper bridge connectors (desktop only) */}
-                <div className="hidden md:block absolute top-1/2 left-20 right-20 h-1 bg-gradient-to-r from-blue-200 via-blue-400 to-blue-200 opacity-60 z-0" style={{ transform: 'translateY(-50%)' }} />
-                {/* Steps */}
-                {[
-                  { icon: FileText, title: "Initial Consultation", desc: "We review your financial situation and tax needs." },
-                  { icon: Calculator, title: "Document Collection", desc: "We gather all necessary tax documents and records." },
-                  { icon: CheckCircle, title: "Preparation & Review", desc: "We prepare your returns and review for accuracy." },
-                  { icon: Shield, title: "Filing & Support", desc: "We file your returns and provide ongoing support." },
-                ].map((item, idx) => (
-                  <div key={idx} className="flex-1 min-w-[200px] z-10 flex flex-col items-center relative mb-16 md:mb-0">
-                    <div className={
-                      `w-16 h-16 flex items-center justify-center mb-6 rounded-full shadow-xl border-4 ` +
-                      [
-                        'bg-gradient-to-br from-blue-500 to-blue-700 border-blue-300',
-                        'bg-gradient-to-br from-green-400 to-green-600 border-green-200',
-                        'bg-gradient-to-br from-yellow-400 to-orange-400 border-yellow-200',
-                        'bg-gradient-to-br from-purple-400 to-blue-600 border-purple-200',
-                      ][idx]
-                    }>
-                      <span className="text-2xl font-bold text-white font-mono mr-1">{idx+1}</span>
-                      <item.icon className="h-7 w-7 text-white ml-1" />
-                    </div>
-                    <div className="text-center">
-                      <h4 className="text-lg md:text-xl font-bold mb-2 text-gray-900">{item.title}</h4>
-                      <p className="text-gray-600 text-base max-w-xs md:max-w-sm mx-auto leading-relaxed">{item.desc}</p>
-                    </div>
-                    {/* Connector (mobile only, except last) */}
-                    {idx < 3 && (
-                      <div className="md:hidden w-1.5 h-14 bg-gradient-to-b from-blue-200 via-blue-400 to-blue-200 opacity-60 mx-auto my-2 rounded-full" />
-                    )}
-                  </div>
-                ))}
-              </div>
+              <p className="text-lg text-slate-600 leading-relaxed">
+                From managing daily transactions to preparing tax filings and financial reports, Sunrise Tax & Business Services is your one-stop back-office partner for accuracy and peace of mind.
+              </p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
+      {/* End-to-End Support Section */}
+      <section id="services" className="py-24 bg-slate-50 fade-in-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Call to Action - Premium CTA */}
-        <section className="relative py-28 bg-gradient-to-b from-white via-blue-50/30 to-white overflow-hidden">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <span className="uppercase tracking-widest text-xs md:text-sm font-bold text-blue-600 mb-4 inline-block">Ready to Get Started?</span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 bg-clip-text text-transparent leading-tight">
-              Get Your Free Tax Consultation Today
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent">
+                End-to-End Support for Small Businesses
+              </span>
             </h2>
-            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-12 max-w-3xl mx-auto">
-              Let our tax experts help you maximize your refund and ensure full compliance. No obligation, just expert advice.
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Comprehensive financial services to keep your business running smoothly
             </p>
-            <div className="flex justify-center">
-              <Link to="/contact" className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-full font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 text-lg group">
-                Get Free Consultation <ArrowRight className="inline-block ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
           </div>
-        </section>
-      </main>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            {/* Bookkeeping */}
+            <div className="group bg-white border-2 border-slate-200 rounded-2xl p-8 hover:border-slate-900 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Calculator className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">Bookkeeping</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Accurate tracking of income, expenses, and cash flow to keep your finances organized.
+              </p>
+            </div>
+
+            {/* Tax Preparation */}
+            <div className="group bg-white border-2 border-slate-200 rounded-2xl p-8 hover:border-slate-900 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <FileText className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">Tax Preparation</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Expert tax filing and compliance for small businesses and individuals.
+              </p>
+            </div>
+
+            {/* Payroll Management */}
+            <div className="group bg-white border-2 border-slate-200 rounded-2xl p-8 hover:border-slate-900 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Users className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">Payroll Management</h3>
+              <p className="text-slate-600 leading-relaxed">
+                On-time payroll with tax withholdings handled properly and efficiently.
+              </p>
+            </div>
+
+            {/* Financial Reporting */}
+            <div className="group bg-white border-2 border-slate-200 rounded-2xl p-8 hover:border-slate-900 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <PieChart className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">Financial Reporting</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Monthly reports that help you see where your business stands financially.
+              </p>
+            </div>
+
+            {/* Admin Support */}
+            <div className="group bg-white border-2 border-slate-200 rounded-2xl p-8 hover:border-slate-900 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <FileCheck className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">Admin Support</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Invoicing, vendor management, and document organization handled seamlessly.
+              </p>
+            </div>
+
+            {/* Compliance & Audit */}
+            <div className="group bg-white border-2 border-slate-200 rounded-2xl p-8 hover:border-slate-900 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Shield className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">Compliance & Audit</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Stay compliant with regulations and prepared for audits with expert guidance.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-24 bg-white fade-in-section">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                <span className="bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent">
+                  Why Choose Sunrise Tax
+                </span>
+              </h2>
+
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle2 className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">Expert Tax Professionals</h3>
+                    <p className="text-slate-600 leading-relaxed">
+                      Our certified team stays current with tax laws to maximize your deductions.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                    <Clock className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">Always On Time</h3>
+                    <p className="text-slate-600 leading-relaxed">
+                      Never miss a deadline with our proactive scheduling and reminders.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                    <Shield className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">Audit Protection</h3>
+                    <p className="text-slate-600 leading-relaxed">
+                      We stand behind our work and provide full support if questions arise.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                    <TrendingUp className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">Growth-Focused Insights</h3>
+                    <p className="text-slate-600 leading-relaxed">
+                      Get actionable insights to help your business grow and thrive financially.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative group">
+              <div className="absolute -inset-4 bg-gradient-to-r from-slate-200 to-slate-100 rounded-3xl opacity-0 group-hover:opacity-100 blur-2xl transition-all duration-500"></div>
+              <img
+                src="/images/Modern workspace with financial documents.jpg"
+                alt="Modern workspace with financial documents"
+                className="relative w-full rounded-2xl shadow-xl group-hover:shadow-2xl transition-shadow duration-300"
+              />
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 bg-slate-50 fade-in-section">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent">
+              Ready to Simplify Your Finances?
+            </span>
+          </h2>
+          <p className="text-xl text-slate-600 mb-10 leading-relaxed">
+            Let our tax and bookkeeping experts handle the numbers while you focus on growing your business.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-sky-600 to-blue-700 text-white text-lg font-semibold rounded-xl hover:from-sky-700 hover:to-blue-800 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Schedule a Free Consultation
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+
+            <Link
+              to="/services"
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-slate-900 text-lg font-semibold rounded-xl border-2 border-slate-300 hover:border-blue-600 hover:bg-blue-50 hover:scale-105 transition-all duration-300"
+            >
+              Explore All Services
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
