@@ -52,6 +52,7 @@ const Contact = () => {
             <p className="text-gray-600">200 N Vineyard Blvd</p>
             <p className="text-gray-600">Honolulu, HI 96817</p>
             <p className="text-gray-500 text-sm mt-2">Ste. A325 A325 - 5603</p>
+            <p className="text-blue-600 font-medium text-sm mt-3">Rendezvous by appointment only — no walk-ins.</p>
           </div>
         </div>
       </div>

@@ -81,6 +81,12 @@ const Footer: React.FC = () => {
                   <span className="text-sm">200 N Vineyard Blvd<br />Honolulu, HI 96817</span>
                 </div>
               </li>
+              <li>
+                <div className="flex items-start gap-3">
+                  <div className="w-5 h-5 mt-0.5 flex-shrink-0"></div>
+                  <span className="text-sm text-blue-600 font-medium">Rendezvous by appointment only — no walk-ins.</span>
+                </div>
+              </li>
             </ul>
 
             {/* Social Links */}
