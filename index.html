@@ -60,6 +60,30 @@
       <textarea name="notes"></textarea>
     </form>
 
+    <form name="loan-inquiry" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="propertyAddress" />
+      <input type="text" name="purchasePrice" />
+      <input type="text" name="loanAmount" />
+      <select name="propertyType">
+        <option></option>
+      </select>
+      <select name="investmentStrategy">
+        <option></option>
+      </select>
+      <select name="timeframe">
+        <option></option>
+      </select>
+      <select name="creditScore">
+        <option></option>
+      </select>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <textarea name="additionalInfo"></textarea>
+      <input type="checkbox" name="marketingConsent" />
+      <input type="checkbox" name="nonMarketingConsent" />
+    </form>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

@@ -285,7 +285,7 @@ export const LoanForm: React.FC<LoanFormProps> = ({ isOpen, onClose }) => {
                       className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 mt-1 mr-3"
                     />
                     <label htmlFor="marketingConsent" className="text-sm text-gray-600">
-                      I consent to receive marketing text messages from Elevate Global Ventures Group at the phone number provided. Frequency may vary. Message & data rates may apply. Text HELP for assistance, reply STOP to opt out.
+                      I consent to receive marketing text messages (e.g., promotions, offers, investment opportunities) from Elevate Global Ventures Group at the phone number provided. Consent is not a condition of any purchase. Message frequency varies. Msg & data rates may apply. Reply HELP for help, STOP to cancel.
                     </label>
                   </div>
                   <div className="flex items-start">
@@ -298,7 +298,7 @@ export const LoanForm: React.FC<LoanFormProps> = ({ isOpen, onClose }) => {
                       className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 mt-1 mr-3"
                     />
                     <label htmlFor="nonMarketingConsent" className="text-sm text-gray-600">
-                      I consent to receive non-marketing text messages from Elevate Global Ventures Group about my order updates, appointment reminders etc. Message & data rates may apply.
+                      I consent to receive non-marketing text messages from Elevate Global Ventures Group, including loan application updates, appointment reminders, and property status notifications. Msg & data rates may apply. Reply HELP for help, STOP to opt out. Consent is not a condition of any purchase.
                     </label>
                   </div>
                 </div>
@@ -312,6 +312,10 @@ export const LoanForm: React.FC<LoanFormProps> = ({ isOpen, onClose }) => {
                     Terms of Service
                   </Link>
                 </div>
+
+                <p className="text-xs text-gray-500 mt-3">
+                  By providing your phone number and checking the consent boxes above, you provide your prior express written consent to receive automated text messages from Elevate Global Ventures Group at the number provided. This consent is not required to make a purchase.
+                </p>
               </div>
             )}
 

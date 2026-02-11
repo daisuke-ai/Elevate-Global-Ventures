@@ -122,6 +122,13 @@ const Footer: React.FC = () => {
               </Link>
             </div>
           </div>
+          <div className="mt-4 text-center">
+            <p className="text-slate-500 text-xs">
+              To opt out of SMS messages, reply STOP at any time. For help, reply HELP or email{' '}
+              <a href="mailto:aloha@wepayhousecash.com" className="text-blue-600 hover:underline">aloha@wepayhousecash.com</a>.
+              Msg & data rates may apply. Consent is not a condition of purchase.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
