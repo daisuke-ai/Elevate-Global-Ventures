@@ -64,9 +64,9 @@ const Footer: React.FC = () => {
             <h4 className="text-base font-bold mb-4 text-slate-900">Get In Touch</h4>
             <ul className="space-y-3">
               <li>
-                <a href="tel:+18087366036" className="group flex items-start gap-3 text-slate-600 hover:text-blue-600 transition-colors duration-200">
+                <a href="tel:+18086465523" className="group flex items-start gap-3 text-slate-600 hover:text-blue-600 transition-colors duration-200">
                   <Phone className="w-5 h-5 mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform duration-200" />
-                  <span className="text-sm">+1 808-736-6036</span>
+                  <span className="text-sm">+1 808-646-5523</span>
                 </a>
               </li>
               <li>

@@ -104,7 +104,7 @@ const TermsAndConditions = () => {
             </p>
             <ul className="list-disc list-inside text-gray-600 leading-relaxed mb-4 pl-4">
               <li>Email: <a href="mailto:aloha@wepayhousecash.com" className="text-blue-600 hover:underline">aloha@wepayhousecash.com</a></li>
-              <li>Phone: <a href="tel:808-736-6036" className="text-blue-600 hover:underline">808-736-6036</a></li>
+              <li>Phone: <a href="tel:808-646-5523" className="text-blue-600 hover:underline">808-646-5523</a></li>
             </ul>
 
             <h3 className="text-lg font-semibold text-darkblue-900 mb-2">5.7 Privacy</h3>

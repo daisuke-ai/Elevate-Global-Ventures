@@ -88,7 +88,7 @@ const PrivacyPolicy = () => {
               <li><strong className="font-medium">Non-Marketing Messages:</strong> Appointment reminders, property offer updates, and loan application status updates require your express consent via checkbox opt-in.</li>
               <li>Consent to receive SMS messages is not a condition of any purchase or service.</li>
               <li>You may opt out of SMS at any time by replying <strong className="font-medium">STOP</strong> to any message. After opting out, you will receive one final confirmation message.</li>
-              <li>For help, reply <strong className="font-medium">HELP</strong> to any message or contact us at <a href="mailto:aloha@wepayhousecash.com" className="text-blue-600 hover:underline">aloha@wepayhousecash.com</a> or call <a href="tel:808-736-6036" className="text-blue-600 hover:underline">808-736-6036</a>.</li>
+              <li>For help, reply <strong className="font-medium">HELP</strong> to any message or contact us at <a href="mailto:aloha@wepayhousecash.com" className="text-blue-600 hover:underline">aloha@wepayhousecash.com</a> or call <a href="tel:808-646-5523" className="text-blue-600 hover:underline">808-646-5523</a>.</li>
             </ul>
           </div>
 
@@ -102,7 +102,7 @@ const PrivacyPolicy = () => {
               <li>Message frequency varies based on your interactions with us.</li>
               <li>Message and data rates may apply. Contact your wireless carrier for pricing details.</li>
               <li>You can opt out at any time by texting <strong className="font-medium">STOP</strong>. You will receive one final confirmation message.</li>
-              <li>For assistance, text <strong className="font-medium">HELP</strong> or contact us at <a href="mailto:aloha@wepayhousecash.com" className="text-blue-600 hover:underline">aloha@wepayhousecash.com</a> or call <a href="tel:808-736-6036" className="text-blue-600 hover:underline">808-736-6036</a>.</li>
+              <li>For assistance, text <strong className="font-medium">HELP</strong> or contact us at <a href="mailto:aloha@wepayhousecash.com" className="text-blue-600 hover:underline">aloha@wepayhousecash.com</a> or call <a href="tel:808-646-5523" className="text-blue-600 hover:underline">808-646-5523</a>.</li>
               <li>We will not sell, rent, or share your phone number or SMS consent information with any third parties or affiliates for marketing purposes.</li>
               <li>Your data may be shared with service providers (such as our CRM and messaging platform) solely for delivering the messages you consented to receive.</li>
               <li>Participating carriers are not liable for delayed or undelivered messages.</li>
@@ -118,7 +118,7 @@ const PrivacyPolicy = () => {
             <ul className="list-disc list-inside text-gray-600 space-y-2 mb-4">
               <li>We only send text messages to individuals who have provided prior express consent (for informational messages) or prior express written consent (for marketing messages) through our website forms.</li>
               <li>We honor all opt-out requests promptly. Upon receiving a STOP message, we will cease sending further communications within a reasonable timeframe.</li>
-              <li>If you believe you have received a message in error, please contact us immediately at <a href="mailto:aloha@wepayhousecash.com" className="text-blue-600 hover:underline">aloha@wepayhousecash.com</a> or call <a href="tel:808-736-6036" className="text-blue-600 hover:underline">808-736-6036</a>.</li>
+              <li>If you believe you have received a message in error, please contact us immediately at <a href="mailto:aloha@wepayhousecash.com" className="text-blue-600 hover:underline">aloha@wepayhousecash.com</a> or call <a href="tel:808-646-5523" className="text-blue-600 hover:underline">808-646-5523</a>.</li>
             </ul>
           </div>
 
