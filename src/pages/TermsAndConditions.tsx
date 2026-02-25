@@ -17,7 +17,7 @@ const TermsAndConditions = () => {
           <div className="text-center">
             <h1 className="text-5xl font-bold text-white mb-6">Terms and Conditions</h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Last Updated: April 14, 2025
+              Last Updated: February 25, 2026
             </p>
           </div>
         </div>
@@ -35,7 +35,14 @@ const TermsAndConditions = () => {
           </div>
 
           <div className="bg-white rounded-xl shadow-sm p-8 mb-8">
-            <h2 className="text-2xl font-bold text-darkblue-900 mb-4">2. Use of the Website</h2>
+            <h2 className="text-2xl font-bold text-darkblue-900 mb-4">2. Eligibility and Age Requirement</h2>
+            <p className="text-gray-600 leading-relaxed">
+              You must be at least 18 years old to use our services and to opt in to receive SMS communications from Elevate Global Ventures LLC. By using this website and submitting your phone number, you represent and warrant that you are 18 years of age or older. If you are under 18, you may not use this Site, submit any personal information, or consent to receive SMS or other communications from us.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-sm p-8 mb-8">
+            <h2 className="text-2xl font-bold text-darkblue-900 mb-4">3. Use of the Website</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
               This Site and its components are offered for informational purposes only; this site shall not be responsible or liable for the accuracy, usefulness or availability of any information transmitted or made available via the site, and shall not be responsible or liable for any error or omissions in that information.
             </p>
@@ -45,14 +52,14 @@ const TermsAndConditions = () => {
           </div>
 
           <div className="bg-white rounded-xl shadow-sm p-8 mb-8">
-            <h2 className="text-2xl font-bold text-darkblue-900 mb-4">3. Intellectual Property</h2>
+            <h2 className="text-2xl font-bold text-darkblue-900 mb-4">4. Intellectual Property</h2>
             <p className="text-gray-600 leading-relaxed">
               The Site and its original content, features, and functionality are owned by Elevate Global Ventures Group and are protected by international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.
             </p>
           </div>
 
           <div className="bg-white rounded-xl shadow-sm p-8 mb-8">
-            <h2 className="text-2xl font-bold text-darkblue-900 mb-4">4. User Submissions and Communication Consent</h2>
+            <h2 className="text-2xl font-bold text-darkblue-900 mb-4">5. User Submissions and Communication Consent</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
               When you submit information through forms on our Site (e.g., property information, loan applications, contact requests), you grant Elevate Global Ventures Group the right to use this information to respond to your inquiries, provide services, and for other business purposes as outlined in our Privacy Policy.
             </p>
@@ -71,67 +78,67 @@ const TermsAndConditions = () => {
           </div>
 
           <div className="bg-white rounded-xl shadow-sm p-8 mb-8">
-            <h2 className="text-2xl font-bold text-darkblue-900 mb-4">5. SMS Terms of Service</h2>
+            <h2 className="text-2xl font-bold text-darkblue-900 mb-4">6. SMS Terms of Service</h2>
 
-            <h3 className="text-lg font-semibold text-darkblue-900 mb-2">5.1 Program Description</h3>
+            <h3 className="text-lg font-semibold text-darkblue-900 mb-2">6.1 Program Description</h3>
             <p className="text-gray-600 leading-relaxed mb-4">
               Elevate Global Ventures Group ("Company," "we," "us") provides an SMS messaging program that delivers property offer updates, cash offer notifications, appointment reminders, loan application status notifications, and promotional messages related to our real estate investment and lending services.
             </p>
 
-            <h3 className="text-lg font-semibold text-darkblue-900 mb-2">5.2 Opt-In and Consent</h3>
+            <h3 className="text-lg font-semibold text-darkblue-900 mb-2">6.2 Opt-In and Consent</h3>
             <p className="text-gray-600 leading-relaxed mb-4">
-              By checking the SMS consent checkbox on our website forms, you expressly consent to receive recurring automated text messages from Elevate Global Ventures Group at the phone number provided. Consent to receive SMS messages is not required as a condition of purchasing any goods or services.
+              By checking the SMS consent checkbox on our website forms, you expressly consent to receive recurring automated text messages from Elevate Global Ventures Group at the phone number provided. You must be at least 18 years of age to opt in to our SMS program. Consent to receive SMS messages is not required as a condition of purchasing any goods or services.
             </p>
 
-            <h3 className="text-lg font-semibold text-darkblue-900 mb-2">5.3 Message Frequency</h3>
+            <h3 className="text-lg font-semibold text-darkblue-900 mb-2">6.3 Message Frequency</h3>
             <p className="text-gray-600 leading-relaxed mb-4">
               Message frequency varies based on your interactions with us. You may receive messages related to your property inquiry, loan application, or promotional offers.
             </p>
 
-            <h3 className="text-lg font-semibold text-darkblue-900 mb-2">5.4 Message and Data Rates</h3>
+            <h3 className="text-lg font-semibold text-darkblue-900 mb-2">6.4 Message and Data Rates</h3>
             <p className="text-gray-600 leading-relaxed mb-4">
               Message and data rates may apply. Please contact your wireless carrier for details about your messaging plan and any associated costs.
             </p>
 
-            <h3 className="text-lg font-semibold text-darkblue-900 mb-2">5.5 Opt-Out</h3>
+            <h3 className="text-lg font-semibold text-darkblue-900 mb-2">6.5 Opt-Out</h3>
             <p className="text-gray-600 leading-relaxed mb-4">
               You can opt out of receiving SMS messages at any time by replying STOP to any text message you receive from us. Upon receipt of your STOP request, you will receive one final confirmation message and no further SMS messages will be sent unless you re-subscribe.
             </p>
 
-            <h3 className="text-lg font-semibold text-darkblue-900 mb-2">5.6 Help</h3>
+            <h3 className="text-lg font-semibold text-darkblue-900 mb-2">6.6 Help</h3>
             <p className="text-gray-600 leading-relaxed mb-4">
               For help or more information about our SMS program, reply HELP to any text message or contact us at:
             </p>
             <ul className="list-disc list-inside text-gray-600 leading-relaxed mb-4 pl-4">
-              <li>Email: <a href="mailto:aloha@wepayhousecash.com" className="text-blue-600 hover:underline">aloha@wepayhousecash.com</a></li>
+              <li>Email: <a href="mailto:aloha@evg.com" className="text-blue-600 hover:underline">aloha@evg.com</a></li>
               <li>Phone: <a href="tel:808-646-5523" className="text-blue-600 hover:underline">808-646-5523</a></li>
             </ul>
 
-            <h3 className="text-lg font-semibold text-darkblue-900 mb-2">5.7 Privacy</h3>
+            <h3 className="text-lg font-semibold text-darkblue-900 mb-2">6.7 Privacy</h3>
             <p className="text-gray-600 leading-relaxed mb-4">
               Your privacy is important to us. Please review our Privacy Policy for information on how we collect, use, and protect your information. We do not sell, rent, or share your mobile number or SMS opt-in data with third parties for promotional purposes.
             </p>
 
-            <h3 className="text-lg font-semibold text-darkblue-900 mb-2">5.8 Carrier Liability</h3>
+            <h3 className="text-lg font-semibold text-darkblue-900 mb-2">6.8 Carrier Liability</h3>
             <p className="text-gray-600 leading-relaxed mb-4">
               Carriers (AT&T, T-Mobile, Verizon, etc.) are not liable for delayed or undelivered messages.
             </p>
 
-            <h3 className="text-lg font-semibold text-darkblue-900 mb-2">5.9 Modifications</h3>
+            <h3 className="text-lg font-semibold text-darkblue-900 mb-2">6.9 Modifications</h3>
             <p className="text-gray-600 leading-relaxed">
               We reserve the right to modify these SMS Terms at any time. Continued participation in our SMS program after changes constitutes acceptance of modified terms.
             </p>
           </div>
 
           <div className="bg-white rounded-xl shadow-sm p-8 mb-8">
-            <h2 className="text-2xl font-bold text-darkblue-900 mb-4">6. Third-Party Links</h2>
+            <h2 className="text-2xl font-bold text-darkblue-900 mb-4">7. Third-Party Links</h2>
             <p className="text-gray-600 leading-relaxed">
               The Site may contain links to third-party websites or services that are not owned or controlled by Elevate Global Ventures Group (e.g., links within blog posts, social media links). Elevate Global Ventures Group has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third-party websites or services. You further acknowledge and agree that Elevate Global Ventures Group shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods or services available on or through any such websites or services.
             </p>
           </div>
 
           <div className="bg-white rounded-xl shadow-sm p-8 mb-8">
-            <h2 className="text-2xl font-bold text-darkblue-900 mb-4">7. Disclaimers and Limitation of Liability</h2>
+            <h2 className="text-2xl font-bold text-darkblue-900 mb-4">8. Disclaimers and Limitation of Liability</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
               The Site is provided on an "AS IS" and "AS AVAILABLE" basis. Elevate Global Ventures Group makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
             </p>
@@ -141,26 +148,26 @@ const TermsAndConditions = () => {
           </div>
 
           <div className="bg-white rounded-xl shadow-sm p-8 mb-8">
-            <h2 className="text-2xl font-bold text-darkblue-900 mb-4">8. Governing Law</h2>
+            <h2 className="text-2xl font-bold text-darkblue-900 mb-4">9. Governing Law</h2>
             <p className="text-gray-600 leading-relaxed">
               Any claim relating to Elevate Global Ventures Group's website shall be governed by the laws of the State of Hawaii, United States, without regard to its conflict of law provisions.
             </p>
           </div>
 
           <div className="bg-white rounded-xl shadow-sm p-8 mb-8">
-            <h2 className="text-2xl font-bold text-darkblue-900 mb-4">9. Changes to Terms</h2>
+            <h2 className="text-2xl font-bold text-darkblue-900 mb-4">10. Changes to Terms</h2>
             <p className="text-gray-600 leading-relaxed">
               Elevate Global Ventures Group reserves the right to modify these terms from time to time at our sole discretion. Therefore, you should review these page periodically. Your continued use of the Website or our service after any such change constitutes your acceptance of the new Terms. If you do not agree to any of these terms or any future version of the Terms, do not use or access (or continue to access) the website or the service. The date of the last update will be clearly posted at the top of this page.
             </p>
           </div>
 
           <div className="bg-white rounded-xl shadow-sm p-8">
-            <h2 className="text-2xl font-bold text-darkblue-900 mb-4">10. Contact Us</h2>
+            <h2 className="text-2xl font-bold text-darkblue-900 mb-4">11. Contact Us</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
               If you have any questions about these Terms, please contact us:
             </p>
             <div className="bg-gray-50 p-4 rounded-lg space-y-2">
-               <p><span className="font-medium">Email:</span> <a href="mailto:aloha@wepayhousecash.com" className="text-blue-600 hover:underline">aloha@wepayhousecash.com</a></p>
+               <p><span className="font-medium">Email:</span> <a href="mailto:aloha@evg.com" className="text-blue-600 hover:underline">aloha@evg.com</a></p>
               <p><span className="font-medium">Address:</span></p>
               <p className="pl-4 text-gray-600">Elevate Global Ventures Group<br />
                 200 N Vineyard Blvd, Ste. A325 A325 - 5603<br />
